@@ -73,42 +73,6 @@ type Surfstore interface {
 }
 ```
 
-## Server
-
-`BlockStore.go` provides a skeleton implementation of the `BlockStoreInterface`
-and `MetaStore.go` provides a skeleton implementation of the
-`MetaStoreInterface` **You must implement the methods in these 2 files which
-have `panic("todo")` as their body.**
-
-`SurfstoreServer.go` should then put everything together to provide a complete
-implementation of the `Surfstore` interface. **You must implement the methods
-in this file which have `panic("todo")` as their body.** (Hint: You have
-already implemented these for the `BlockStore` and the `Metastore`, you just
-need to call them appropriately. )
-
-`SurfstoreServer.go` also has a method `ServeSurfstoreServer` **which you must
-implement**. It should register the `Server` instance passed to it and start
-listening for connections from clients. 
-
-## Client
-
-`SurfstoreRPCClient.go` provides the rpc client stub for the surfstore rpc
-server. **You must implement the methods in this file which have
-`panic("todo")` as their body.** (Hint: one of them has been implemented for
-you) 
-
-`SurfstoreClientUtils.go` also has the following method which **you need to
-implement** for the sync logic of clients:
-
-```go
-
-/*
-Implement the logic for a client syncing with the server here.
-*/
-func ClientSync(client RPCClient) {
-	panic("todo")
-}
-```
 
 ## Setup
 
@@ -127,9 +91,9 @@ export PATH=$PATH:$GOPATH/bin
 
 ## Usage
 
-1. Only after you have implemented all the methods and completed the `Setup`
+1. After you have completed the `Setup`
 steps, run the `build.sh` script provided with the starter code. This should
-create 2 executables in the `bin` folder inside your starter code directory.
+create 2 executables in the `bin` folder inside your code directory.
 
 ```shell
 > ./build.sh
@@ -137,7 +101,7 @@ create 2 executables in the `bin` folder inside your starter code directory.
 SurfstoreClientExec SurfstoreServerExec
 ```
 
-2. Run your server using the script provided in the starter code.
+2. Run your server using the script provided in the code.
 
 ```shell
 ./run-server.sh
@@ -167,3 +131,5 @@ pic.jpg index.txt
 ```
 
 We observe that pic.jpg has been synced to this client.
+
+Starter code provided by George Porter, UCSD.
