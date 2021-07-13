@@ -10,10 +10,10 @@ does not offer any guarantees about operations across files, meaning that it doe
 multi-file transactions (such as atomic move).
 
 The SurfStore service is composed of the following two services:
-● BlockStore : The content of each file in SurfStore is divided up into chunks, or blocks,
+1. BlockStore : The content of each file in SurfStore is divided up into chunks, or blocks,
 each of which has a unique identifier. This service stores these blocks, and when given
 an identifier, retrieves and returns the appropriate block.
-● MetadataStore : The MetadataStore service holds the mapping of filenames to blocks.
+2. MetadataStore : The MetadataStore service holds the mapping of filenames to blocks.
 
 ## Data Types
 
